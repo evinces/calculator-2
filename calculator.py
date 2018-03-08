@@ -8,6 +8,12 @@ calculator program yourself in this file.
 from arithmetic2 import *
 
 
+def my_reduce(function, iterable):
+    result = iterable[0]
+    for i in range(1, len(iterable)):
+        result = function(result, iterable[i])
+    return result
+
 # Your code goes here
 while True:
     user_input = raw_input("> ")
@@ -25,7 +31,7 @@ while True:
 
         try:
             if tokens[0] == "+":
-                print reduce(lambda x, y: add(x, y), tokens[1:])
+                print my_reduce(lambda x, y: add(x, y), tokens[1:])
 
             elif tokens[0] == "-":
                 print reduce(lambda x, y: subtract(x, y), tokens[1:])
