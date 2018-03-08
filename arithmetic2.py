@@ -1,42 +1,28 @@
 """Math functions for calculator."""
 
 
-def add(num_list):
+def add(num1, num2):
     """Return the sum of the two inputs."""
-    result = 0
-    for num in num_list:
-        result += num
-    return result
+
+    return num1 + num2
 
 
-def subtract(num_list):
+def subtract(num1, num2):
     """Return the second number subtracted from the first."""
 
-    result = 0
-    for num in num_list:
-        result -= num
-
-    return result
+    return num1 - num2
 
 
-def multiply(num_list):
+def multiply(num1, num2):
     """Multiply the two inputs together."""
 
-    result = 1
-    for num in num_list:
-        result *= num
-
-    return result
+    return num1 * num2
 
 
-def divide(num_list):
+def divide(num1, num2):
     """Divide the first input by the second and return the result."""
 
-    result = num_list[0]
-    for i in range(1, len(num_list)):
-        result /= num_list[i]
-
-    return result
+    return num1 / num2
 
 
 def square(num1):
